@@ -55,7 +55,7 @@ function Pdf() {
       setApiLoader(true)
       console.log('you press enter');
       try {
-        const res = await axios.post(`http://localhost:7000/aiPdfDoubt`, { pdfContent, question })
+        const res = await axios.post(`https://aifusion-project-2.onrender.com/aiPdfDoubt`, { pdfContent, question })
         console.log(res.data.ansToDoubt.content)
        
         setAiSolution(res.data.ansToDoubt.content)

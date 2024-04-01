@@ -22,7 +22,7 @@ function Summary() {
             }
             else{
                 setLoading(true);
-                const res = await axios.post('http://localhost:7000/aiSummrize',{textInput})
+                const res = await axios.post('https://aifusion-project-2.onrender.com/aiSummrize',{textInput})
                 console.log(res.data);
                 setValue(res.data.summary.content);
                 setLoading(false); 

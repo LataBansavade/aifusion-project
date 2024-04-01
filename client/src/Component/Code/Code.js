@@ -43,7 +43,7 @@ function Code() {
             }
             setLoading(true);
             setaCode("")
-            const res = await axios.post('http://localhost:7000/aiCoded', { quesInput, language });
+            const res = await axios.post('https://aifusion-project-2.onrender.com/aiCoded', { quesInput, language });
             console.log(res.data);
             
             setaCode(res.data.ansCode.content);
