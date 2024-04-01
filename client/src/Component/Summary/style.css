@@ -1,0 +1,221 @@
+.summ_body{
+    background-color: white;
+    color: rgb(19, 18, 18);
+    width: 100vw;
+    height: 100vh;
+}
+
+.summ_main{
+    display:  flex;
+    margin-top: 2.5rem;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.summ_Title{
+    display: flex;
+    margin-left: 6rem;
+    width: 15rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 1.5rem;
+    border-radius: 2rem;
+    background-color: #1d2026;
+    color: white;
+}
+.loader{
+    margin-left: 10rem;
+    margin-top: 12rem;
+}
+.summ_right{
+    height: 580px;
+    width: 480px;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    padding: 1rem 1rem;
+    box-shadow: 0px 0px 3px 2px gray;
+    border-radius: 2rem;
+}
+
+.summ_para{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    height: 430px;
+    width: 390px;
+    resize: none;
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: lightgray;
+    border-radius: 1.5rem;
+    box-shadow: inset 0px 0px 10px 5px rgb(3, 3, 3);
+    padding: 1.5rem ;
+}
+.summ_para::-webkit-scrollbar, .summ_api::-webkit-scrollbar{
+    display: none;
+}
+.summ_api{
+    display: flex;
+    height: 445px;
+    width: 390px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+    margin-left: 2rem;
+    line-height: 1.7;
+    font-family: monospace;
+    font-size: 17px;
+    padding: 1.5rem 2rem;
+    background-color: lightgray;
+    box-shadow: inset 0px 0px 10px 5px rgb(3, 3, 3);
+}
+.summ_left{
+    height: 580px;
+    width:480px;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    padding: 1rem 1rem;
+    color: black;
+    box-shadow: 0px 0px 3px 2px gray;
+    border-radius: 2rem;
+}
+
+
+
+.summ_api{
+    padding: 1rem 1rem;
+    
+}
+
+.summ_Btn{
+    border: none;
+    margin-top: 20rem;
+    /* margin-left: 6rem; */
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 20px;
+    width: 11rem;
+    height: 4rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.summ_Btn:hover{
+    border-radius: 2rem;
+    scale: 1.1;
+}
+
+@media only screen and (max-width: 1290px) {
+   .summ_main{
+     flex-wrap: nowrap;
+   }
+   .summ_right{
+    scale: 0.9;
+   }
+   .summ_left{
+    scale: 0.9;
+   }
+}
+
+@media only screen and (max-width: 1140px) {
+    .summ_main{
+      flex-wrap: nowrap;
+    }
+    .summ_right{
+     scale: 0.8;
+     margin-right: 10px;
+    }
+    .summ_left{
+     scale: 0.8;
+     margin-left: 10px;
+    }
+ }
+ @media only screen and (max-width: 1020px) {
+    .summ_main{
+      flex-wrap: wrap;
+    }
+    .summ_right{
+     scale: 0.8;
+     margin-right: 8px;
+     margin-top: -20px;
+    }
+    .summ_left{
+     scale: 0.8;
+     margin-left: -170px;
+     margin-top: -100px;
+    }
+    .summ_Btn{
+        margin-inline: 0px;
+        margin-top: 500px;
+    }
+ }
+
+
+ @media only screen and (max-width: 700px) {
+    .summ_main{
+      flex-wrap: wrap;
+    }
+    .summ_right{
+     scale: 0.8;
+     margin-right: 88px;
+     margin-top: -20px;
+    }
+    .summ_left{
+     scale: 0.8;
+     margin-left: -400px;
+     margin-top: 20px;
+     /* margin-right: 80px; */
+    }
+    .summ_Btn{
+        margin-top: -20px;
+        margin-right: 80px;
+        margin-left: 40px;
+    }
+ }
+
+ @media only screen and (max-width: 500px) {
+    .summ_main{
+      flex-wrap: wrap;
+    }
+    .summ_right{
+     scale: 0.7;
+     margin-right: 88px;
+     margin-top: -70px;
+    }
+    .summ_left{
+     scale: 0.7;
+     margin-left: -400px;
+     margin-top: -50px;
+     /* margin-right: 80px; */
+    }
+    .summ_Btn{
+        margin-top: -60px;
+        margin-right: 80px;
+        margin-left: 40px;
+    }
+ }
+
+ @media only screen and (max-width: 400px) {
+    .summ_main{
+      flex-wrap: wrap;
+    }
+    .summ_right{
+     scale: 0.7;
+     margin-right: 88px;
+     margin-top: -70px;
+    }
+    .summ_left{
+     scale: 0.7;
+     margin-left: -800px;
+     margin-top: -50px; 
+      margin-right: 80px;
+    }
+    .summ_Btn{
+        margin-top: -60px;
+        margin-right: 80px;
+        margin-left: 40px;
+    }
+ }

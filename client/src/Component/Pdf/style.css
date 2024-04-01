@@ -1,0 +1,106 @@
+.pdfPage{
+    padding: 0rem 0.7rem;
+}
+
+.pdfUploadSection {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 80px;
+    background-color: #f0f0f0; 
+    border-radius: 1rem;
+  }
+  
+  .upload-header {
+    cursor: pointer;
+  }
+
+  .mainSection {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px; 
+  }
+  
+  .leftSectionDev,
+  .rightSectionDev {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .leftSectionDev iframe {
+    display: block;
+    margin: 0 auto; 
+  }
+  
+  .rightSectionDev {
+    margin-left: 3rem; 
+  }
+  
+  .rightSectionDev input {
+    width: 50%;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  
+  .solutionToDoubt {
+    border: 1.5px dashed black;
+    line-height: 20px;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 90%;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+   
+  }
+  
+  .loader-container {
+    display: flex;
+    height: 5.5rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #25b09b;
+    --_m:
+      conic-gradient(#0000 10%, #000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  
+  @keyframes l3 {
+    to {
+      transform: rotate(1turn)
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .mainSection{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .leftSectionDev{
+        width: 90%;
+        margin-bottom: 2.5rem;
+    }
+    .rightSectionDev{
+        width: 90%;
+    }
+  }

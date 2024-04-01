@@ -1,0 +1,116 @@
+.NavBar{
+    display: flex;
+    align-items: center;
+     padding: 0.8rem 1.8rem;
+     gap: 4rem;
+     margin-left: 2rem;
+     /* justify-content: space-between; */
+}
+
+.NavBtn{
+    padding: 0.8rem 0.8rem;
+}
+.NavBar .navlist a {
+    text-decoration: none;
+    color: rgb(15, 14, 14);
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+}
+
+.NavBar .navlist a:hover{
+
+    background-color: black;
+    border-radius: 1rem;
+    color: white;
+}
+
+.NavBar .navlist .active{
+    background-color: black;
+    border-radius: 1rem;
+    color: white;
+}
+.navlist{
+    display: flex;
+    gap: 0.5rem;
+    
+}
+.webname{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(15, 14, 14);
+}
+.NavBtn{
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    color: rgb(27, 26, 26);
+    border: none;
+    outline: none;
+    transition: all 1s ease;
+    cursor: pointer;
+    font-size: 18px;
+}
+.NavBtn:hover{
+    box-shadow: 0px 5px 10px 0px black;
+    background-color:black;
+    color:white;
+    border-radius: 10px;
+}
+.muiDrawer{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+.navlist{
+    gap: 0px;
+    margin-left: -50px;
+}
+}
+
+@media only screen and (max-width: 960px){
+    .navlist{
+      display: none;
+    }
+    .muiDrawer{
+        display: block;
+        margin-left: 25rem;
+    }
+    }
+  
+@media only screen and (max-width: 800px){
+    .muiDrawer{
+        margin-left: 15rem;
+    }
+    }
+      
+@media only screen and (max-width: 600px){
+    .muiDrawer{
+        margin-left: 8rem;
+    }
+    }
+
+@media only screen and (max-width: 500px)
+{
+    .muiDrawer{
+        margin-left: 5rem;
+    }
+       .webname{
+        font-size: 26px;
+       }
+}
+
+
+@media only screen and (max-width: 450px)
+{
+    .muiDrawer{
+        margin-left: 1rem;
+    }
+       .webname{
+        font-size: 22px;
+       }
+      
+}
