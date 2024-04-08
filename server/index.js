@@ -30,10 +30,21 @@ const PORT =  process.env.PORT || 5000;
 app.use(express.urlencoded({ extended: true })); //this is used for form data
 app.use(express.json()); // this is used for hitting req from anywhere like postman
 app.use(cors({
-  origin: ['http://localhost:3000'],
-  credentials: true
-}))
-
+  // origin: 'https://ai-v3-front.vercel.app', // Allow requests from this origin
+  origin: 'http://localhost:3000', // Allow requests from this origin
+  credentials: true // Allow credentials (cookies, authorization headers, etc.)
+}));
+//CORS Middleware
+const corsMiddleware = (req, res, next) => {
+    // res.setHeader('Access-Control-Allow-Origin', 'https://ai-v3-front.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+};
+// Apply CORS Middleware globally
+app.use(corsMiddleware);
 
 // Db Connection
 mongoose.connect(process.env.MONGO_URI)
