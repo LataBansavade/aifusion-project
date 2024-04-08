@@ -9,6 +9,7 @@
 
 .NavBtn{
     padding: 0.8rem 0.8rem;
+    margin-left: 25rem;
 }
 .NavBar .navlist a {
     text-decoration: none;
@@ -20,8 +21,7 @@
 }
 
 .NavBar .navlist a:hover{
-
-    background-color: black;
+    background-color: gray;
     border-radius: 1rem;
     color: white;
 }
@@ -50,13 +50,15 @@
     color: rgb(27, 26, 26);
     border: none;
     outline: none;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
     font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 .NavBtn:hover{
-    box-shadow: 0px 5px 10px 0px black;
-    background-color:black;
+    box-shadow: 0px 0px 2px  black;
+    background-color:rgb(11, 11, 11);
     color:white;
     border-radius: 10px;
 }

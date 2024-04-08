@@ -9,7 +9,15 @@
   .dash_title {
     font-size: 7rem;
     margin-bottom: 1.5rem;
+    margin-top: 0rem;
+    font-weight: 600;
+    
   }
+  /* .dash_title{
+    color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:white;
+  } */
   
   .dash_info {
     font-size: 1.2rem;

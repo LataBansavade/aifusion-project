@@ -1,0 +1,185 @@
+.home_body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgb(250, 247, 247);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .home_left{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .home_left h1{
+    font-size: 4rem;
+    font-weight: 100;
+    margin-top: -1rem;
+    animation: scale-infinite 5s infinite alternate;
+  }
+  
+  @keyframes scale-infinite {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.11);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .home_left button{
+     padding: 1rem 5rem;
+     font-size: 18px;
+     background-color: white;
+     /* margin-left: 2rem; */
+     border-radius: 5px;
+    transition: all 1s ease;
+  
+  }
+  .home_left button:hover{
+    box-shadow: 0px 10px 10px 0px black;
+  }
+  
+  
+  .container {
+    display: grid;
+    width: 45rem;
+    height: 38rem;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 5rem 2fr 10rem 10rem;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+        "header header header"
+        "sidebar content-1 content-1"
+        "sidebar content-2 content-3"
+        "footer footer footer";
+       
+  }
+  
+  .header {
+    grid-area: header;
+    background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background: url("https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .content-1 {
+    grid-area: content-1;
+    background: url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .content-2 {
+    grid-area: content-2;
+    background: url("https://images.unsplash.com/photo-1698084068165-69a631a3ba1b?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .content-3 {
+    grid-area: content-3;
+    background: url("https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .footer {
+    grid-area: footer;
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    background: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .item {
+    color:white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 1s ease;
+    background-color: black;
+  }
+  
+  
+  .item:hover{
+    box-shadow: 0px 10px 20px 0px rgb(49, 39, 39);
+    scale: 1.1;
+  }
+  
+  .home_left img{
+    width:18rem;
+    height:18rem;
+    
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container{
+      width: 35rem;
+      height: 38rem;
+      margin-top: 1rem;
+      scale: 0.9;
+    }
+    .home_left h1{
+      font-size: 2.5rem;
+    }
+    .home_left img{
+      height: 10rem;
+      width: 10rem;
+    }
+    .home_left button{
+      padding: 1rem 1.5rem;
+    }
+    .home_body{
+      gap: 1rem;
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 480px) {
+    .container{
+      width: 35rem;
+      height: 38rem;
+      margin-top: -3rem;
+      scale: 0.8;
+    }
+    .home_left h1{
+      font-size: 2rem;
+    }
+    .home_left img{
+      height: 7rem;
+      width: 7rem;
+    }
+    .home_left button{
+      padding: 0.7rem 1.5rem;
+    }
+    .home_body{
+      gap: 1rem;
+    }
+  }
+  

@@ -83,13 +83,14 @@ function Code() {
                         </select>
                         <button className='code_btn' onClick={handleCode}>Get Code</button>
                         </div>
+                       
                     </div>
                   
                     {/* Render each line of code */}
                     <div className='code_div'>
                         <div className='code_inner'>
                         {
-                            loading ? (<Loader className='code_Loader'/>) : (renderCodeLines())
+                            loading ? (<Loader color="secondary" className='loader' />) : (renderCodeLines())
                         }
                         </div>
                     </div>

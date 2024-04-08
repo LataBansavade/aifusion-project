@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-
+import Loader from '@mui/material/CircularProgress';
 
 function Summary() {
     const [value ,setValue] = useState('');
@@ -66,8 +66,8 @@ function Summary() {
                 <h3 className='summ_Title'>Get Your summary here</h3>
                 <div className='summ_api'>
                 {loading ? ( // Render the loader if loading is true
-                            // <Loader color="secondary" className='loader' />
-                            <p>Loading....</p>
+                            <Loader color="secondary" className='loader' />
+                            // <p>Loading....</p>
                         ) : (
                             effectSummary // Render the summary when loading is false
                         )}

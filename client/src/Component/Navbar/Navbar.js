@@ -32,19 +32,19 @@ function Navbar() {
 
   const navigate = useNavigate()
 
-  // async function logoutFromApp(e){
-  //   e.preventDefault();
-  //   try {
-  //     const res = await axios.get('http://localhost:7000/logout');
-  //     console.log(res.data);
-  //     if(res.data.logoutSuccess){
-  //       toast.success(res.data.message);
-  //       navigate('/');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error during logout:', error);
-  //   }
-  // }
+  async function logoutFromApp(){
+   
+    try {
+      const res = await axios.get('https://aifusion-project-2.onrender.com/logout');
+      console.log(res.data);
+      if(res.data.logoutSuccess){
+        toast.success(res.data.message);
+        navigate('/');
+      }
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  }
 
 
     const toggleDrawer = (newOpen) => () => {
@@ -74,7 +74,7 @@ function Navbar() {
   );
 
 
-  const handleDrawerItemClick = (text) => {
+  const handleDrawerItemClick =  (text) => {
     switch (text) {
       case 'Summary':
         navigate('/summarize');
@@ -92,7 +92,7 @@ function Navbar() {
         navigate('/image');
         break;
       case 'Logout':
-        // logoutFromApp();
+         logoutFromApp();
         break;
       default:
         break;
@@ -105,13 +105,13 @@ function Navbar() {
     <div className='NavBar'>
       <NavLink className= 'webname' to='/'><img style={{width:'3.5rem' , height:'3.5rem' , borderRadius: '50%',marginRight : '0.8rem'}} src={logo} alt='logo'/>AiFusion</NavLink>
       <ul className='navlist'>
-        <NavLink to="/">Dashboard</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
         <NavLink to="/summarize">Summary</NavLink>
         <NavLink to="/code">Code</NavLink>
         <NavLink to="/pdf">Pdf</NavLink>
-        {/* <NavLink to="/chat">Chat</NavLink>
-        <NavLink to="/image">Image</NavLink> */}
-        {/* <button className='NavBtn' onClick={logoutFromApp}>Logout</button> */}
+        <NavLink to="/chat">Chat</NavLink>
+        <NavLink to="/image">Image</NavLink>
+        <button className='NavBtn' onClick={logoutFromApp}>Logout</button>
         
       </ul>
       <div className='muiDrawer'>
