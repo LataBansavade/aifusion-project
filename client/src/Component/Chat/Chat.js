@@ -32,7 +32,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import UndoIcon from '@mui/icons-material/Undo';
 import ClearIcon from '@mui/icons-material/Clear';
 
-// const openAiAPI = process.env.NEXT_PUBLIC_OPENAI_API_KEY
+
 
 const Chat = () => {
     const [message, setMessage] = useState('') //the msg we type
@@ -133,16 +133,16 @@ const Chat = () => {
 
     const sendMessage = async () => {
 
-        // check Token is present
+       
         
 
         setIsLoader(true)
-        // console.log(message)
+       
         let url = "https://api.openai.com/v1/chat/completions"
 
-        // let token;
+       
         let token = `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
-        // let token = `Bearer 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
+       
         
         let model = 'gpt-3.5-turbo'
   
