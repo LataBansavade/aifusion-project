@@ -139,11 +139,7 @@ const Chat = () => {
         setIsLoader(true)
        
         let url = "https://api.openai.com/v1/chat/completions"
-
-       
         let token = `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
-       
-        
         let model = 'gpt-3.5-turbo'
   
         // adding old msg to new msg list
