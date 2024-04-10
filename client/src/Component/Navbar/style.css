@@ -62,10 +62,19 @@
     color:white;
     border-radius: 10px;
 }
-.muiDrawer{
+.muiDrawer2{
     display: none;
 }
-
+@media only screen and (max-width: 1290px){
+    .NavBtn{
+        margin-left: 3rem;
+    }
+}
+@media only screen and (max-width: 1090px){
+    .NavBtn{
+        margin-left: 0rem;
+    }
+}
 @media only screen and (max-width: 1000px){
 .navlist{
     gap: 0px;
@@ -77,27 +86,27 @@
     .navlist{
       display: none;
     }
-    .muiDrawer{
+    .muiDrawer2{
         display: block;
         margin-left: 25rem;
     }
     }
   
 @media only screen and (max-width: 800px){
-    .muiDrawer{
+    .muiDrawer2{
         margin-left: 15rem;
     }
     }
       
 @media only screen and (max-width: 600px){
-    .muiDrawer{
+    .muiDrawer2{
         margin-left: 8rem;
     }
     }
 
 @media only screen and (max-width: 500px)
 {
-    .muiDrawer{
+    .muiDrawer2{
         margin-left: 5rem;
     }
        .webname{
@@ -108,7 +117,7 @@
 
 @media only screen and (max-width: 450px)
 {
-    .muiDrawer{
+    .muiDrawer2{
         margin-left: 1rem;
     }
        .webname{

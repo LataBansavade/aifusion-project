@@ -14,9 +14,10 @@ const Container = styled.div`
   justify-content: center;
   padding: 16px;
   box-shadow:0px 0px 3px 1px gray;
-  color: ${({ theme }) => theme.arrow + 80};
+  border-radius: 3px;
+  color: black;
   border-radius: 20px;
-  margin-top:-70px;
+  margin-top:20px;
   `;
 
 const Image = styled.img`

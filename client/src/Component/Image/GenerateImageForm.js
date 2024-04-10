@@ -14,14 +14,16 @@ import 'react-toastify/dist/ReactToastify.css';
     padding: 16px 20px;
     display: flex;
     flex-direction: column;
-    gap: 9%;
+    gap: 10%;
     justify-content: center;
-    margin-top:-50px
+    margin-top:-60px
   `;
   const Top = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
+    margin-bottom:20px
+    margin-top:50px;
   `;
   const Title = styled.div`
     font-size: 28px;
@@ -39,6 +41,7 @@ import 'react-toastify/dist/ReactToastify.css';
     gap: 18px;
     font-size: 12px;
     font-weight: 400;
+   
     color: ${({ theme }) => theme.text_secondary};
   `;
   const Actions = styled.div`
@@ -73,11 +76,7 @@ import 'react-toastify/dist/ReactToastify.css';
     } catch (error) {
         console.log(error);
         setGenerateImageLoading(false);
-        if(!error.response.data.isTokenPresent){
-          // alert("Token expire")
-          toast.error('Token expired Please Login');
-          navigate('/loginregister')
-      }
+        
     }
   };
 
@@ -91,7 +90,7 @@ import 'react-toastify/dist/ReactToastify.css';
         </Desc>
       </Top>
       <Body>
-        <TextInput
+        <TextInput 
           label="Image Prompt"
           placeholder="Write a detailed prompt about the image . . . "
           name="name"

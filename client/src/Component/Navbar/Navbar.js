@@ -114,7 +114,7 @@ function Navbar() {
         <button className='NavBtn' onClick={logoutFromApp}>Logout</button>
         
       </ul>
-      <div className='muiDrawer'>
+      <div className='muiDrawer2'>
                     <Button onClick={toggleDrawer(true)}><MenuIcon style={{fontSize: '2rem',color:"black"}}/></Button>
                     <Drawer open={open} onClose={toggleDrawer(false)}>
                     {DrawerList}

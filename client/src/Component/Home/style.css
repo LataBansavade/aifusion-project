@@ -136,6 +136,10 @@
     height:18rem;
     
   }
+
+  @media only screen and (max-width: 1285px){
+
+  }
   
   @media only screen and (max-width: 768px) {
     .container{
@@ -159,14 +163,19 @@
     }
   }
   
-  
+  @media only screen and (max-width: 520px){
+    .container{
+      margin-top: -5rem;
+      scale: 0.8;
+    }
+  }
   
   @media only screen and (max-width: 480px) {
     .container{
       width: 35rem;
       height: 38rem;
-      margin-top: -3rem;
-      scale: 0.8;
+      margin-top: -6rem;
+      scale: 0.7;
     }
     .home_left h1{
       font-size: 2rem;
@@ -182,4 +191,11 @@
       gap: 1rem;
     }
   }
-  
+  @media only screen and (max-width: 430px){
+    .container{
+      width: 30rem;
+      height: 32rem;
+      margin-top: -12rem;
+      scale: 0.6;
+    }
+  }
