@@ -30,13 +30,13 @@ const PORT =  process.env.PORT || 5000;
 app.use(express.urlencoded({ extended: true })); //this is used for form data
 app.use(express.json()); // this is used for hitting req from anywhere like postman
 app.use(cors({
-   origin: 'https://aifusion-project-cbs4t6ig6-lata-bansavades-projects.vercel.app', // Allow requests from this origin
+   origin: 'https://aifusion-project-final.vercel.app/', // Allow requests from this origin
   // origin: 'http://localhost:3000', // Allow requests from this origin
   credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));
 //CORS Middleware
 const corsMiddleware = (req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://aifusion-project-cbs4t6ig6-lata-bansavades-projects.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://aifusion-project-final.vercel.app/');
     // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
